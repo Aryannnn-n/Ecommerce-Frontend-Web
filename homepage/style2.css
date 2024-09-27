@@ -1,0 +1,114 @@
+.shop-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: #e2e7e6;
+  margin-bottom: 10px;
+}
+
+.box {
+  height: 450px;
+  width: 23%;
+  /* border: 2px solid black; */
+  background-color: white;
+  padding: 20px 0px 15px;
+  margin-top: 0.9rem;
+  border-radius: 25px;
+}
+
+.shop-section a {
+  color: cornflowerblue;
+  text-decoration: none;
+}
+
+.box:hover {
+  border: 2px solid silver;
+  /* box-shadow: #febd68; */
+}
+
+.box-img {
+  height: 325px;
+  background-size: cover;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 25px;
+}
+
+.box-img:hover {
+  box-shadow: #333;
+}
+
+.box-content {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.box-content p {
+  color: #007185;
+}
+
+/* Footer */
+footer {
+  background-color: #f8f9fa;
+  padding: 20px 0;
+  height: 175px;
+}
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.footer-section {
+  flex: 1;
+  margin: 15px;
+  align-items: center;
+}
+
+.footer-section h5 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+.footer-section p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Copyright Section */
+.footer-bottom {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  margin-top: 20px;
+}
+
+.footer-container {
+  margin-top: 20px;
+}
+
+/* Social Media Icons */
+
+.social-icons {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+}
+.social-icons li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+.social-icons li a:hover {
+  color: #007bff;
+}
+
+/* Footer */
+footer {
+  border-top: 2px solid rgb(238, 232, 232);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}

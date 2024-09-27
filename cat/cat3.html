@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details | Astra Store</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        /* Basic Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: url("https://img.freepik.com/free-photo/shopping-trolley-with-little-snooze_23-2147957113.jpg?w=996&t=st=1727326369~exp=1727326969~hmac=cd5190d6c9639a177a01402ee75f2c528ac964321382cfe4cd5fb452ab1652f5");
+background-size: contain;
+        }
+
+        /* Header Banner */
+        .banner {
+            background-color: transparent;
+            color: black;
+            text-align: center;
+            padding: 50px;
+            font-size: 30px;
+            /* background-image: url(/box1_image.jpg); */
+            background-size: cover;
+        }
+
+        /* Product Container */
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: transparent;
+            color: black;
+            border: 1px black;
+        }
+
+        /* Left Section - Product Images */
+        .product-images {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .main-image {
+            width: 100%;
+            max-width: 400px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        /* Thumbnail Images */
+        .thumbnails {
+            display: flex;
+            gap: 10px;
+        }
+
+        .thumbnails img {
+            width: 80px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: border 0.3s;
+        }
+
+        .thumbnails img:hover {
+            border-color: #007bff;
+        }
+
+        /* Right Section - Product Details */
+        .product-details {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .product-details h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            padding-top: 158px;
+            text-align: center;
+        }
+
+
+        .product-details .price {
+            font-size: 22px;
+            font-weight: bold;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        .product-details p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Add to Cart */
+        .add-to-cart {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .add-to-cart:hover {
+            background-color: #0056b3;
+        }
+
+        /* Related Products Section */
+        .related-products {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .related-products h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: black;
+        }
+
+        .related-products .product-card {
+            display: inline-block;
+            width: 300px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .related-products .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .related-products .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .related-products .product-card .details {
+            padding: 15px;
+            text-align: center;
+            background-color: transparent;
+        }
+
+        .related-products .product-card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .related-products .product-card .price {
+            font-size: 16px;
+            font-weight: bold;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .related-products .product-card a {
+            display: block;
+            text-align: center;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .related-products .product-card a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Banner -->
+    <div class="banner">
+        Shop Deals In Furniture
+    </div>
+
+    <!-- Product Details Section -->
+    <div class="product-container">
+        <!-- Left Section: Images -->
+        <div class="product-images">
+            <img src="https://m.media-amazon.com/images/I/71Hs2soL+YL._SX425_.jpg" alt="Main Product Image"
+                class="main-image" id="mainImage">
+
+            <!-- Thumbnails -->
+            <div class="thumbnails">
+                <img src="https://m.media-amazon.com/images/I/51R8MN2yoLL._SX425_.jpg"" alt=" Thumbnail 1">
+                <img src="https://m.media-amazon.com/images/I/61gfEYue5LL._SX425_.jpg" alt="Thumbnail 2">
+                <img src="https://m.media-amazon.com/images/I/61ZCBZkA9rL._SX425_.jpg" alt="Thumbnail 3">
+            </div>
+        </div>
+
+        <!-- Right Section: Product Details -->
+        <div class="product-details">
+            <h1>Wood 4 Seater Sofa Set</h1>
+            <div class="price">23599 Rs</div>
+            <p>
+                DK FURNITURE Solid Sheesham Wood 4 Seater Sofa Set for Living Room Furniture, Wooden 3+1 Sofa Set, 4
+                Seater Sofa Set, Sofa Set - (Honey Finish)
+            </p>
+            <button type="button" class="btn btn-outline-primary">Add To Cart</button>
+
+        </div>
+    </div>
+
+    <!-- Related Products Section -->
+    <div class="related-products">
+        <h2>Related Products</h2>
+
+        <!-- Related Product Card -->
+        <div class="product-card">
+            <img src="https://m.media-amazon.com/images/I/51WhmsBLOVL._SY300_SX300_QL70_FMwebp_.jpg"
+                alt="Related Product 1">
+            <div class="details">
+                <h3>Seventh Heaven 6'X5' Jute Fabric Seater Sofa</h3>
+                <div class="price">7999 Rs</div>
+                <button type="button" class="btn btn-outline-primary">View Details</button>
+
+            </div>
+        </div>
+
+        <!-- Related Product Card -->
+        <div class="product-card">
+            <img src="https://m.media-amazon.com/images/I/61KSc9X2L1L._SX425_.jpg" alt="Related Product 2">
+            <div class="details">
+                <h3>duroflex Utopia - 3-Person Sofa Premium Fabric Sofa Set</h3>
+                <div class="price">29599 Rs</div>
+                <button type="button" class="btn btn-outline-primary">View Details</button>
+
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+</body>
+
+</html>
